@@ -1,0 +1,10 @@
+name: deepchem
+channels:
+  - conda-forge
+  - ccsb-scripps
+dependencies:
+  - deepchem==2.5.0
+  - rdkit
+  - chembl_webresource_client
+  - jupyterlab
+  - vina

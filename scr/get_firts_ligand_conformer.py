@@ -9,8 +9,9 @@ import os, sys
 
 # In[7]:
 
+my_files = open(sys.argv[1]).readlines() 
 
-my_files = open("../files/ligand_vina_out_CHEMBL126.pdbqt").readlines() 
+#my_files = open("../files/ligand_vina_out_CHEMBL126.pdbqt").readlines() 
 
 
 # In[44]:
@@ -34,13 +35,13 @@ for num,x in enumerate( my_files):
 # In[50]:
 
 
-model = [ x for x in my_files[start:end] if x[0:4] == "ATOM" ]
+model = [ x.strip() for x in my_files[start:end] if x[0:4] == "ATOM" ]
 
 
 # In[52]:
 
-
-print ( model ) 
+for x in model:
+    print ( x ) 
 
 
 # In[ ]:
